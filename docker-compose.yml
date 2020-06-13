@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  react:
+    image: node:lts-alpine
+    container_name: react
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    tty: true
+    stdin_open: true
+    command: yarn start
